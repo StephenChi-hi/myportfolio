@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState(''); 
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   // const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ]; // word that would be displayed 
+  const toRotate = [ "A Web Developer", "A Mobile App Developer", "A Webflow Dev and More" ]; // word that would be displayed 
   const period = 2000; //time before anther phrase pops out 
 
   //the useeffect would be resposible for taking care of typing or deleting 
