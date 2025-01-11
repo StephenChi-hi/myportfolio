@@ -3,20 +3,25 @@ const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-// server used to send send emails
+// server used to send emails
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+
+// Replace these with your actual email credentials
+const EMAIL_USER = "nwikechisom77@gmail.com"; // Your email address
+const EMAIL_PASS = "krfy hqsx vfhy tsyd"; // Your email password or app-specific password
+
+console.log(EMAIL_USER);
+console.log(EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
+  service: "gmail",
   auth: {
-    user: "********@gmail.com",
-    pass: ""
+    user: EMAIL_USER,
+    pass: EMAIL_PASS,
   },
 });
 
@@ -29,13 +34,13 @@ contactEmail.verify((error) => {
 });
 
 router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
+  const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
   const mail = {
     from: name,
-    to: "********@gmail.com",
+    to: EMAIL_USER, // Replace this with your email
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
