@@ -80,7 +80,7 @@ export const NavBar = () => {
                 <a href="https://www.linkedin.com/in/nwike-c-6b90a9156">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://www.instagram.com/nature_nsc">
+                <a href="https://www.instagram.com/nature_ncs">
                   <img src={navIcon3} alt="" />
                 </a>
               </div>
