@@ -11,7 +11,12 @@ export const Banner = () => {
   const [text, setText] = useState(''); 
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   // const [index, setIndex] = useState(1);
-  const toRotate = [ "A Web Developer", "A Mobile App Developer", "A Webflow Dev and More" ]; // word that would be displayed 
+  const toRotate = [
+    ", A Creative Software Developer",
+    ", A Project Manager",
+    ", A Full Stack Web Developer",
+    ", A Mobile App Developer",
+  ]; // word that would be displayed 
   const period = 2000; //time before anther phrase pops out 
 
   //the useeffect would be resposible for taking care of typing or deleting 
@@ -57,25 +62,54 @@ export const Banner = () => {
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Nwike Chisom:`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Web Developer", "A Mobile App Developer", "A Webflow Dev and More" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I'm a software engineer specializing in building (and occasionally designing) an exceptional digital experiences. Currently, I'm focused on building front-ends for various web applications</p>
-                  <button  onClick={() => { window.location.href = "https://t.me/naTure1715"; } }>Let's Connect On Telegram<ArrowRightCircle size={25} /></button>
-              </div>}
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>
+                    {`Hi! I'm Chisom`}
+                    <span
+                      className="txt-rotate"
+                      dataPeriod="1000"
+                      data-rotate='[ ", A Creative Software Developer", ", A Project Manager", ", A Full Stack Web Developer", ", A Mobile App Developer" ]'
+                    >
+                      <span className="wrap">{text}</span>
+                    </span>
+                  </h1>
+                  <p>
+                    As a skilled full-stack developer, I am dedicated to turning
+                    ideas into innovative web applications.
+                  </p>
+                  <button
+                    onClick={() => {
+                      window.location.href = "https://t.me/naTure1715";
+                    }}
+                  >
+                    Let's Connect
+                    <ArrowRightCircle size={25} />
+                  </button>
+                </div>
+              )}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__zoomIn" : ""
+                  }
+                >
+                  <img src={headerImg} alt="Header Img" />
+                </div>
+              )}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
     </section>
-  )
+  );
 }
