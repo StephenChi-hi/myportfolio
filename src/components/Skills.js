@@ -34,9 +34,10 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                Experienced in HTML/CSS, JavaScript, React.js, React Native,
-                Python Programming, Next.js, Rust, Firebase, AI Integration,
-                Digital Marketing, and SEO.
+                Skilled in HTML/CSS, JavaScript, React.js, React Native, Python,
+                Next.js, Rust, Firebase, AI Integration, Digital Marketing, and 
+                Search Engine Optimization, I bring creativity and
+                innovation to every project.
               </p>
 
               <div className="  skill-slider">
@@ -72,6 +73,7 @@ export const Skills = () => {
                   <img src={meter3} alt=" " />
                   <h5>FireBase</h5>
                 </div>
+                
               </div>
             </div>
           </div>
