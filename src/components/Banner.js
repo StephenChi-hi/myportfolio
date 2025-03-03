@@ -80,7 +80,7 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    As a skilled full-stack developer, I am dedicated to turning
+                    As a skilled web developer, I am dedicated to turning
                     ideas into innovative web applications.
                   </p>
                   <button

@@ -166,7 +166,7 @@ export const Projects = () => {
                     <br />
                     <br />
                     <h3>Nwike Chisom </h3>
-                    <p>Senior Software Developer and Project manager</p>
+                    <p>Software Developer and Project manager</p>
                   </center>
 
                   <br />
